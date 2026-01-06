@@ -1,0 +1,145 @@
+.dashboard-container{
+    margin: 0;
+}
+.dashboard-title h1{
+    color: #00d4ff; 
+}
+.dashboard-cards{
+display: flex;
+justify-content: space-evenly;
+margin-top: 1rem;
+color: #e5e7eb;
+gap: 15px;
+
+}
+.travellers{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+border-radius: 12px;
+padding: 20px;
+
+   background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+}
+.bookings{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+border-radius: 12px;
+padding: 20px;
+
+background: linear-gradient(135deg, #6a11cb, #2575fc);
+
+}
+.revenue{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+border-radius: 12px;
+padding: 20px;
+
+background: linear-gradient(135deg, #11998e, #38ef7d);
+
+}
+
+.trips{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+border-radius: 12px;
+padding: 20px;
+
+background: linear-gradient(135deg, #133f3b, #ffe606); 
+}
+.operations{
+   display: flex;
+   margin-top: 2rem;
+height: 70vh;
+justify-content: space-evenly;
+}
+.recent-bookings{
+   
+background: linear-gradient(135deg, #0f172a, #1c1f38);
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+padding: 20px;
+text-align: left;
+width: 50%;;
+}
+.recent-bookings li{
+    list-style: none;
+}
+.status {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.alerts {
+  background: linear-gradient(135deg, #0f172a, #1c1f38); /* dark card */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  padding: 20px;
+  color: #e5e7eb; /* soft white */
+  margin-bottom: 20px;
+}
+
+.alerts h1 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.alerts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.alert {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.2s;
+  cursor: default;
+}
+
+
+.alert:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+.alert.pending {
+  background-color: #facc15; 
+  color: #050c2b; 
+}
+
+.alert.cancelled {
+  background-color: #ef4444; 
+  color: white;
+}
+
+.alert.info {
+  background-color: #06b6d4; 
+  color: #050c2b;
+}
+
+.alert.warning {
+  background-color: #f97316; /* orange */
+  color: #050c2b;
+}
+
+/* Optional: small icon size control */
+.alert span, .alert::before {
+  font-size: 1rem;
+}
+
+@media (max-width:768px){
+    .dashboard-cards{
+        display: grid;
+        gap: 25px;
+    }
+
+    
+}

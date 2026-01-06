@@ -1,0 +1,14 @@
+.stats-card{
+    height: 80px;
+   align-items: flex-start;
+
+    width: 100px;
+}
+
+.stats-card h1{
+    
+    font-size: 1.2rem;
+}
+.stats-card h2{
+    font-size: 0.8rem;
+}
