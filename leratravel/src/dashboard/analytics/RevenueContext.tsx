@@ -32,7 +32,7 @@ useEffect(()=>{
     const timer= setTimeout(()=>{
 
         try{
- const mockData: RevenueRecord[] = [
+ const mockData: RevenueRecord[] = [  //am going to simulate real api call to the backend here later
           { date: "2024-01-01", amount: 12000 },
           { date: "2024-01-05", amount: 18000 },
           { date: "2024-01-10", amount: 9000 },

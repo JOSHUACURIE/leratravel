@@ -36,18 +36,18 @@ if (loading) {
 
   return (
     <section className="revenue-analytics">
-      {/* 1. Header Section */}
+
       <header className="analytics-header">
         <h2>Revenue Analytics</h2>
         <p>Real-time performance metrics and distribution</p>
       </header>
 
-      {/* 2. Filter Buttons Container */}
+ 
       <div className="analytics-filter">
         {["7D", "30D", "90D"].map((range) => (
           <button
             key={range}
-            // Use currentRange from context to apply the 'active' class
+           
             
             onClick={() => changeTimeRange(range as "7D" | "30D" | "90D")}
           >
@@ -57,13 +57,13 @@ if (loading) {
       </div>
 
       <div className="revenue-content">
-        {/* 3. Snapshot Cards */}
+
         <RevenueSnapshot
           totalRevenue={totalRevenue}
           averageRevenue={averageRevenue}
         />
 
-        {/* 4. Chart Container Wrapper */}
+    
         <div className="chart-container">
           <RevenueChart revenueData={revenueData} />
         </div>
