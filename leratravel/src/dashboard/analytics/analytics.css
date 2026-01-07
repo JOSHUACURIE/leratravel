@@ -84,3 +84,55 @@
   border-radius: 12px;
   margin: 2rem;
 }
+/* Container for the loading state */
+.analytics-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.5); /* Slight overlay effect */
+  border-radius: 16px;
+}
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* The actual animated spinner */
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #f1f5f9; /* Light slate track */
+  border-top: 4px solid #3b82f6; /* Your Primary Blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Loading text color */
+.spinner-container p {
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Rotation Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-container p {
+  animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

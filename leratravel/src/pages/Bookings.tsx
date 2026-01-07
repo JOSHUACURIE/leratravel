@@ -1,9 +1,9 @@
-import { RevenueAnalytics } from "../dashboard/analytics/RevenueAnalytics"
+import { Dashboards } from "../dashboard/Dashboard"
 
 export const Bookings=()=>{
     return(
         <div>
-            <RevenueAnalytics/>
+            <Dashboards/>
         </div>
     )
 }

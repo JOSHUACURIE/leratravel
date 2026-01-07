@@ -54,7 +54,7 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({ revenueData }) => {
     border: 'none', 
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)' 
   }}
-  // Fix: Use optional type for value and handle the undefined case
+ 
   formatter={(value: number | string | undefined) => {
     if (value === undefined) return ["KES 0", "Revenue"];
     return [`KES ${Number(value).toLocaleString()}`, "Revenue"];

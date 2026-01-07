@@ -1,6 +1,6 @@
 import { StartsCard } from "../components/ui/StatsCard";
 import './Dashboard.css';
-import { RevenueAnalytics } from "../dashboard/analytics/RevenueAnalytics";
+import { Dashboards } from "../dashboard/Dashboard";
 const RECENT_BOOKINGS = [
   { id: 1, name: "Kerubo Achieng", route: "Nairobi → Mombasa", status: "confirmed" },
   { id: 2, name: "Brian Otieno", route: "Nairobi → Zanzibar", status: "pending" },
@@ -79,7 +79,7 @@ export const Dashboard = () => {
       </section>
 
       <section>
-        <RevenueAnalytics/>
+        <Dashboards/>
       </section>
     </div>
   );
