@@ -1,16 +1,15 @@
 import './StatsCard.css'
 
-type StartsProps={
-    text:string;
-    values: number;
+type StatsProps = {
+    text: string;
+    values: number | string; 
 }
 
-export const StartsCard: React.FC<StartsProps>=({text,values})=>{
-    return(
+export const StartsCard: React.FC<StatsProps> = ({ text, values }) => {
+    return (
         <div className="stats-card">
-    <h1>{text}</h1>
-    <h2>{values}</h2>
-
+            <p className="stats-label">{text}</p>
+            <h2 className="stats-value">{values.toLocaleString()}</h2>
         </div>
     )
 }

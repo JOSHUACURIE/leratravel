@@ -1,7 +1,7 @@
 import { useEffect,useMemo,useState } from "react";
 import { RevenueSnapshot } from "./components/RevenueSnapshot";
 import { RevenueChart } from "./components/RevenueChart";
-
+import './analytics.css'
 type RevenueRecord={ //types
     date:string,
     amount:number
@@ -69,39 +69,34 @@ if(error) return<div className="analytics-error">{error}</div>;
 
 /* Rendering now */
 
-
-return(
-<section className="revenue-analytics">
-    {/* header */}
+return (
+  <section className="revenue-analytics">
     <header className="analytics-header">
-        <h2>Revenue Analytics</h2>
-        <p>Overview of Revenue Performance</p>
+      <h2>Revenue Analytics</h2>
+      <p>Overview of Revenue Performance</p>
     </header>
 
-{/*analytics filter */}
-<div className="analytics-filter">
+    <div className="analytics-filter">
+      {(["7D", "30D", "90D"] as TimeRange[]).map((range) => (
+        <button
+          key={range}
+          className={timeRange === range ? "active" : ""}
+          onClick={() => setTimeRange(range)}
+        >
+          {range === "7D" ? "7 Days" : range === "30D" ? "30 Days" : "90 Days"}
+        </button>
+      ))}
+    </div>
 
-<button onClick={() => setTimeRange("7D")}>Last 7 Days</button>
-<button onClick={() => setTimeRange("30D")}>Last 30 Days</button>
-<button onClick={() => setTimeRange("90D")}>Last 90 Days</button>
-
-</div>
-
- {/*Snapshot */}
-
- <div>
- <RevenueSnapshot 
- totalRevenue={totalRevenue}
- averageRevenue={averageRevenue} //passing them as props
- />
- </div>
-{/**Chart placeholder*/}
-<div >
-<RevenueChart
-revenueData={revenueData}
-/>
-
-</div>
-
-</section>
-)}
+    <div className="revenue-content">
+      <RevenueSnapshot 
+        totalRevenue={totalRevenue}
+        averageRevenue={averageRevenue} 
+      />
+      
+      <div className="chart-container">
+        <RevenueChart revenueData={revenueData} />
+      </div>
+    </div>
+  </section>
+)};

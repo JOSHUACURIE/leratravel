@@ -1,3 +1,4 @@
+import './RevenueSnapshot.css'
 type RevenueSnapshotProps= {
 totalRevenue:number,
 averageRevenue:number

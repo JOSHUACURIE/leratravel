@@ -1,109 +1,86 @@
 import { StartsCard } from "../components/ui/StatsCard";
-import './Dashboard.css'
+import './Dashboard.css';
+import { RevenueAnalytics } from "../dashboard/analytics/RevenueAnalytics";
+const RECENT_BOOKINGS = [
+  { id: 1, name: "Kerubo Achieng", route: "Nairobi → Mombasa", status: "confirmed" },
+  { id: 2, name: "Brian Otieno", route: "Nairobi → Zanzibar", status: "pending" },
+  { id: 3, name: "Faith Wanjiku", route: "Nairobi → Dubai", status: "paid" },
+  { id: 4, name: "Daniel Mwangi", route: "Nairobi → Maasai Mara", status: "confirmed" },
+  { id: 5, name: "Amina Hassan", route: "Nairobi → Cape Town", status: "cancelled" },
+  { id: 6, name: "Kevin Ouma", route: "Nairobi → Diani Beach", status: "pending" },
+];
 
-export const Dashboard=()=>{
-return(
+const ALERTS = [
+  { id: 1, type: "pending", text: " Pending Payment: Booking #1024 by Kerubo Achieng" },
+  { id: 2, type: "cancelled", text: " Cancelled Trip: Booking #1019 by Amina Hassan" },
+  { id: 3, type: "info", text: "New Traveller: Brian Otieno registered today" },
+  { id: 4, type: "warning", text: " High Traffic Alert: 50+ bookings in last hour" },
+  { id: 5, type: "info", text: "System Notice: Database backup completed successfully" },
+  { id: 6, type: "warning", text: "Low Availability: 2 rooms left for Zanzibar package" },
+];
+
+export const Dashboard = () => {
+  return (
     <div className="dashboard-container">
-       <div>
-          <div className="dashboard-title">
-                <h1>Overview of System Activity</h1>
-            </div>
-        <div className="dashboard-cards">
+      <header className="dashboard-title">
+        <h1>Overview of System Activity</h1>
+      </header>
 
-          
-            <div className="travellers">
-            <StartsCard
-            text="Total Travellers"
-            values={123}
-            
-            /></div>
-         
-           <div className="bookings">
-            <StartsCard
-            text="Total Bookings"
-            values={2500}
-            /></div>
-            
-            <div className="revenue">
-            <StartsCard
-            text="Total Revenue"
-            values={100000}
-            /></div>
-
-
-              <div className="trips">
-            <StartsCard
-            text="Active Trips"
-            values={15}
-            /></div>
-            
-            
+      <section className="dashboard-cards">
+        <div className="card-wrapper travellers-bg">
+          <StartsCard text="Total Travellers" values={123} />
         </div>
+        
+        <div className="card-wrapper bookings-bg">
+          <StartsCard text="Total Bookings" values={2500} />
         </div>
-<div className="operations">
-<div className="recent-bookings">
-  <h1>Recent Bookings</h1>
+        
+        <div className="card-wrapper revenue-bg">
+          <StartsCard text="Total Revenue" values={100000} />
+        </div>
 
-  <ul className="bookings-list">
-    <li>
-      <strong>Kerubo Achieng</strong> — Nairobi → Mombasa
-      <span className="status confirmed">Confirmed</span>
-    </li>
+        <div className="card-wrapper trips-bg">
+          <StartsCard text="Active Trips" values={15} />
+        </div>
+      </section>
 
-    <li>
-      <strong>Brian Otieno</strong> — Nairobi → Zanzibar
-      <span className="status pending">Pending</span>
-    </li>
+      <section className="operations">
+        <div className="ops-card recent-bookings">
+          <div className="card-header">
+            <h2>Recent Bookings</h2>
+          </div>
+          <ul className="bookings-list">
+            {RECENT_BOOKINGS.map((booking) => (
+              <li key={booking.id}>
+                <div className="booking-info">
+                  <strong>{booking.name}</strong>
+                  <span>{booking.route}</span>
+                </div>
+                <span className={`status ${booking.status}`}>
+                  {booking.status}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-    <li>
-      <strong>Faith Wanjiku</strong> — Nairobi → Dubai
-      <span className="status paid">Paid</span>
-    </li>
+        <div className="ops-card alerts">
+          <div className="card-header">
+            <h2>Alerts</h2>
+          </div>
+          <ul className="alerts-list">
+            {ALERTS.map((alert) => (
+              <li key={alert.id} className={`alert ${alert.type}`}>
+                {alert.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-    <li>
-      <strong>Daniel Mwangi</strong> — Nairobi → Maasai Mara
-      <span className="status confirmed">Confirmed</span>
-    </li>
-
-    <li>
-      <strong>Amina Hassan</strong> — Nairobi → Cape Town
-      <span className="status cancelled">Cancelled</span>
-    </li>
-
-    <li>
-      <strong>Kevin Ouma</strong> — Nairobi → Diani Beach
-      <span className="status pending">Pending</span>
-    </li>
-  </ul>
-</div>
-
-  <div className="alerts">
-  <h1>Alerts</h1>
-
-  <ul className="alerts-list">
-    <li className="alert pending">
-      ⚠️ Pending Payment: Booking #1024 by Kerubo Achieng
-    </li>
-    <li className="alert cancelled">
-      ❌ Cancelled Trip: Booking #1019 by Amina Hassan
-    </li>
-    <li className="alert info">
-      🆕 New Traveller: Brian Otieno registered today
-    </li>
-    <li className="alert warning">
-      ⚡ High Traffic Alert: 50+ bookings in last hour
-    </li>
-    <li className="alert info">
-      💾 System Notice: Database backup completed successfully
-    </li>
-    <li className="alert warning">
-      🔔 Low Availability: 2 rooms left for Zanzibar package
-    </li>
-  </ul>
-</div>
-
-
-</div>
+      <section>
+        <RevenueAnalytics/>
+      </section>
     </div>
-)
-}
+  );
+};
