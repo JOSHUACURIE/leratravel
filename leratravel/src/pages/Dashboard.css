@@ -18,6 +18,7 @@
   background-color: var(--bg-color);
   min-height: 100vh;
   font-family: 'Inter', -apple-system, sans-serif;
+  width: 100%;
 }
 
 .dashboard-title h1 {

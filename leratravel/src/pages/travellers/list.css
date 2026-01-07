@@ -1,0 +1,60 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* Ensures it doesn't break on small screens */
+  margin: 20px 0;
+}
+
+.travellers-table {
+  width: 100%;
+  border-collapse: collapse; /* Removes double borders */
+  background-color: white;
+  font-size: 0.95rem;
+}
+
+/* Header Styling */
+.travellers-table thead tr {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.travellers-table th {
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* Row Styling */
+.travellers-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+/* Zebra Striping */
+.travellers-table tbody tr:nth-of-type(even) {
+  background-color: #fafafa;
+}
+
+/* Hover Effect */
+.travellers-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* Alignment Helpers */
+.text-right {
+  text-align: right !important;
+}
+
+.KES-cell {
+  font-family: 'Courier New', Courier, monospace; /* Optional: for aligned numbers */
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.travellers-table strong {
+  color: #007bff;
+}
