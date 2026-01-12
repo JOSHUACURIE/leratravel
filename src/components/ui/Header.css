@@ -1,0 +1,86 @@
+.header {
+  /* Richer gradient and glassmorphism */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-name h1 {
+  font-size: 1.4rem; /* Slightly smaller for elegance */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Tighter gap for a unified nav bar */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list li a {
+  color: #94a3b8; /* Muted text for inactive state */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover Effect */
+.nav-list li a:hover {
+  color: #f8fafc;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Active State - "Pill" effect */
+.nav-list li a.active {
+  color: #3b82f6; /* Modern Blue */
+  background-color: rgba(59, 130, 246, 0.1); /* Soft blue background */
+  font-weight: 600;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive: Stack or hide on small screens */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .nav-list {
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 5px;
+    justify-content: flex-start;
+  }
+  
+  .nav-list li a {
+    white-space: nowrap; /* Prevent text wrapping in nav */
+  }
+}

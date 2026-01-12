@@ -1,0 +1,120 @@
+/* Layout Container */
+.travellers-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Main Card */
+.travellers-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Header Section */
+.travellers-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.travellers-header h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1a202c;
+}
+
+.travellers-header p {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* List Styling */
+.travellers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.traveller-item {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.2s;
+}
+
+.traveller-item:hover {
+  background-color: #fcfcfd;
+}
+
+.traveller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traveller strong {
+  display: block;
+  font-size: 1rem;
+  color: #2d3748;
+}
+
+.traveller p {
+  margin: 2px 0 0;
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* Right Side (Date and Money) */
+.date-money {
+  text-align: right;
+}
+
+.date-money span {
+  display: block;
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.date-money .amount {
+  font-weight: 700;
+  color: #2b6cb0; /* Deep blue for currency */
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* Summary Footer */
+.summary {
+  background-color: #f1f5f9;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #e2e8f0;
+}
+
+.summary-item {
+  text-align: center;
+}
+
+.summary-item p:first-child {
+  margin: 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.summary-item p:last-child {
+  margin: 4px 0 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1e293b;
+}

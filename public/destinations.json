@@ -1,0 +1,35 @@
+
+{
+  "destinations": [
+    {
+      "id": 1,
+      "destination": "Mariwa-Bondo",
+      "amount": 2300,
+      "date": "23-12-2025"
+    },
+    {
+      "id": 2,
+      "destination": "Nairobi-Mombassa",
+      "amount": 2500,
+      "date": "12-01-2026"
+    },
+    {
+      "id": 3,
+      "destination": "Awasi-Bondo",
+      "amount": 1500,
+      "date": "12-01-2026"
+    },
+    {
+      "id": 4,
+      "destination": "Kaler-Nyandago",
+      "amount": 2000,
+      "date": "22-01-2026"
+    },
+    {
+      "id": 5,
+      "destination": "Migori-Eldoret",
+      "amount": 1800,
+      "date": "18-01-2026"
+    }
+  ]
+}

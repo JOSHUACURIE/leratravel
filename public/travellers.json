@@ -1,0 +1,53 @@
+{
+    "travellers":[
+        {
+        "id":1,
+        "name":"Joshua Juma",
+        "date":"23-12-2025",
+        "destination":"Mariwa-Bondo",
+        "amount":2300
+      },
+      {
+        "id":2,
+        "name":"Vidah Limaya",
+        "date":"12-01-2026",
+        "destination":"Nairobi-Mombassa",
+        "amount":2500
+      },
+      {
+        "id":3,
+        "name":"Mornica Ayalo",
+        "date":"12-01-2026",
+        "destination":"Awasi-Bondo",
+        "amount":1500
+      },
+      {
+        "id":4,
+        "name":"Mourine Akinyi",
+        "date":"22-01-2026",
+        "destination":"Kaler-Nyandago",
+        "amount":2000
+      },
+      {
+        "id":5,
+        "name":"Mitchelle Warioba",
+        "date":"18-01-2026",
+        "destination":"Migori-Eldoret",
+        "amount":1800
+      },
+      {
+        "id":6,
+        "name":"Bathseba Kerubo",
+        "date":"01-02-2026",
+        "destination":"Migori-Nairobi",
+        "amount":1450
+      },
+      {
+        "id":7,
+        "name":"Trizer Liberty",
+        "date":"12-07-2026",
+        "destination":"Migori-Mombassa",
+        "amount":2500
+      }
+    ]
+}

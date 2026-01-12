@@ -1,0 +1,33 @@
+.stats-card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    height: 120px;
+    padding: 1rem;
+    width: 100%; 
+    
+
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stats-label {
+    margin: 0;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.9; 
+    font-weight: 500;
+}
+
+
+.stats-value {
+
+    font-size: 2rem; 
+    font-weight: 800;
+    line-height: 1;
+}
